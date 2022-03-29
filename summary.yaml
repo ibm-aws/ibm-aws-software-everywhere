@@ -148,6 +148,7 @@ categories:
           - cluster
           - vpc
         versions:
+          - v1.13.1
           - v1.13.0
           - v1.12.2
           - v1.12.1
@@ -383,20 +384,49 @@ categories:
         softwareProvider: ibm-cp
         type: gitops
         id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
-        name: gitops-db2
+        name: gitops-db2u
         description: Module to populate a gitops repo with the resources to provision db2
         tags:
           - tools
           - gitops
         versions:
+          - v1.0.8
+          - v1.0.7
+          - v1.0.6
           - v1.0.5
           - v1.0.4
           - v1.0.3
           - v1.0.2
           - v1.0.1
           - v1.0.0
-        group: terraform-gitops-db2u-operator
+        group: db2u-operator
         displayName: IBM DB2U Operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-db2
+        description: Module to populate a gitops repository with the resources to configure a schema on a DB2 instance
+        tags:
+          - db2
+          - schema
+          - gitops
+        versions:
+          - v0.0.2
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
+        group: db2
+        displayName: IBM DB2 Database Instance
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-db2-schema
+        description: Module to populate a gitops repo with the resources to provision cp-db2-schema
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
+        group: db2
+        displayName: IBM DB2 Database Schema
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
@@ -988,6 +1018,7 @@ categories:
           - devops
           - gitops
         versions:
+          - v1.15.2
           - v1.15.1
           - v1.15.0
           - v1.14.9
@@ -1000,6 +1031,7 @@ categories:
           - v1.14.2
           - v1.14.1
         id: github.com/cloud-native-toolkit/terraform-tools-gitops
+        alias: gitops_repo
         group: ""
         displayName: GitOps repo
       - cloudProvider: ""
@@ -1044,16 +1076,17 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-ibm-ocs
+        name: gitops-ibm-odf
         description: Module to populate a gitops repo with the resources to provision ibm-ocs using the OpenShift Data Foundation add-on for ROKS clusters.
         tags:
           - tools
           - gitops
         versions:
+          - v0.0.2
           - v0.0.1
-        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-ocs
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
         group: ""
-        displayName: ibm-ocs
+        displayName: ibm-odf
   - category: iam
     categoryName: IAM
     selection: multiple
@@ -1157,12 +1190,14 @@ categories:
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-access-group
         name: ibm-access-group
+        registryId: cloud-native-toolkit/access-group/ibm
         description: Module to create ADMIN and USER access groups for a set of resource groups
         tags:
           - tools
           - ibm cloud
           - access groups
         versions:
+          - v3.0.2
           - v3.0.0
           - v2.3.0
           - v2.2.0
@@ -1579,7 +1614,7 @@ categories:
           - v0.0.2
           - v0.0.1
         group: ""
-        displayName: Cloud Pak for Data Instance
+        displayName: Cloud Pak for Data Operator
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
@@ -1623,14 +1658,15 @@ categories:
         group: ""
         displayName: CP TrustStore
       - cloudProvider: ""
-        softwareProvider: ""
+        softwareProvider: ibm-cp
         type: gitops
         name: gitops-cp4s
-        description: Module to populate a gitops repo with the resources to provision cp4s
+        description: Module to populate a gitops repo with the resources to provision IBM Cloud Pak for Security
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
         group: ""
         displayName: Cloud Pak for Security
@@ -1659,6 +1695,21 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
         group: ""
         displayName: IBM Business Automation Navigator and UMS operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-ace-dashboard
+        description: Module to populate a gitops repo with the resources to provision the ACE Dashboard
+        tags:
+          - ace
+          - cp4i
+          - dashboard
+          - gitops
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
+        group: cp4i
+        displayName: CP4I Ace Dashboard
   - category: middleware
     categoryName: Middleware
     selection: multiple
@@ -1932,6 +1983,7 @@ categories:
           - operator
           - ace
         versions:
+          - v1.1.4
           - v1.1.3
           - v1.1.2
           - v1.1.1
@@ -2055,6 +2107,7 @@ categories:
           - operator
           - ace
         versions:
+          - v1.0.3
           - v1.0.2
           - v1.0.1
           - v1.0.0
@@ -2118,6 +2171,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.1.1
           - v1.1.0
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-fabric
@@ -2318,6 +2372,7 @@ categories:
           - vpc
           - public gateway
         versions:
+          - v1.8.2
           - v1.8.1
           - v1.8.0
           - v1.7.0
@@ -2359,6 +2414,7 @@ categories:
           - subnets
           - vpc
         versions:
+          - v1.12.2
           - v1.12.1
           - v1.12.0
           - v1.11.0
@@ -2716,6 +2772,7 @@ categories:
           - virtual instance
           - vpc
         versions:
+          - v1.0.8
           - v1.0.7
           - v1.0.5
           - v1.0.4
@@ -2777,9 +2834,11 @@ categories:
         name: aws-nat-gateway
         description: Module to provision nat-gateway on aws
         tags:
-          - tools
-          - devops
-        versions: []
+          - infrastructure
+          - networking
+          - aws
+        versions:
+          - v1.0.2
         id: github.com/cloud-native-toolkit/terraform-aws-nat-gateway
         group: nat-gateway
         displayName: AWS NAT Gateway
@@ -2851,15 +2910,18 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-logdna
-        name: logdna
-        description: Module to provision a LogDNA instance
+        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis
+        name: ibm-log-analysis
+        description: Module to provision a IBM Log Anaysis instance on IBM Cloud
         tags:
           - tools
           - devops
-          - logdna
-          - logging
+          - log analysis
+          - ibm
         versions:
+          - v4.1.2
+          - v4.1.1
+          - v4.1.0
           - v4.0.0
           - v3.3.1
           - v3.3.0
@@ -2875,18 +2937,23 @@ categories:
           - v2.5.0
           - v2.4.4
           - v2.4.3
+        alias: logdna
+        registryId: cloud-native-toolkit/log-analysis/ibm
         group: logging
-        displayName: IBM LogDNA
+        displayName: IBM Log Analysis
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-logdna-bind
-        name: ibm-logdna-bind
-        description: Binds the logdna instance to a cluster
+        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
+        name: ibm-log-analysis-bind
+        description: Module to bind the IBM Log Analysis instance to a cluster
         tags:
           - tools
           - logging
+          - kubernetes
         versions:
+          - v1.3.0
+          - v1.2.4
           - v1.2.3
           - v1.2.2
           - v1.1.1
@@ -2903,19 +2970,23 @@ categories:
           - v1.0.0
           - v0.0.1
           - v0.0.0
+        alias: ibm-logdna-bind
         group: ""
-        displayName: IBM LogDNA Bind
+        displayName: IBM Log Analysis Bind
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig
-        name: sysdig
-        description: Module to set up the Sysdig into a cluster
+        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring
+        name: ibm-cloud-monitoring
+        description: Module provision an instance of IBM Cloud Monitoring in an IBM Cloud account
         tags:
           - tools
-          - devops
           - monitoring
+          - ibm
         versions:
+          - v4.1.2
+          - v4.1.1
+          - v4.1.0
           - v4.0.1
           - v4.0.0
           - v3.4.0
@@ -2934,19 +3005,24 @@ categories:
           - v2.5.0
           - v2.4.0
           - v2.3.3
+        alias: sysdig
+        registryId: cloud-native-toolkit/cloud-monitoring/ibm
         group: monitoring
-        displayName: IBM Sysdig
+        displayName: IBM Cloud Monitoring
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
-        name: sysdig-bind
-        description: Module to bind a Sysdig instance to a cluster
+        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring-bind
+        name: ibm-cloud-monitoring-bind
+        description: Module to bind an existing IBM Cloud Monitoring instance to a cluster
         tags:
           - tools
           - monitor
-          - sres
+          - sre
+          - kubernetes
         versions:
+          - v1.3.1
+          - v1.3.0
           - v1.2.3
           - v1.2.2
           - v1.1.1
@@ -2961,8 +3037,9 @@ categories:
           - v1.0.0
           - v0.0.1
           - v0.0.0
+        alias: sysdig-bind
         group: ""
-        displayName: IBM Sysdig Bind
+        displayName: IBM Cloud Monitoring Bind
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
@@ -3013,6 +3090,7 @@ categories:
           - object storage
           - saas
         versions:
+          - v4.0.3
           - v4.0.2
           - v4.0.1
           - v4.0.0
@@ -3115,6 +3193,8 @@ categories:
           - s3
           - instance s3
         versions:
+          - v1.1.1
+          - v1.1.0
           - v1.0.0
           - v0.0.2
           - v0.0.1
@@ -3132,6 +3212,8 @@ categories:
           - s3
           - file upload
         versions:
+          - v1.1.1
+          - v1.1.0
           - v1.0.0
           - v0.0.1
         group: object-storage-bucket
@@ -3161,6 +3243,7 @@ categories:
           - tools
           - devops
         versions:
+          - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-portworx
         group: portworx
@@ -3247,7 +3330,13 @@ categories:
           - yq
           - jq
           - igc
+          - ibmcloud
+          - argocd
+          - oc
+          - kubectl
         versions:
+          - v1.9.1
+          - v1.9.0
           - v1.8.5
           - v1.8.4
           - v1.8.3
@@ -3271,6 +3360,7 @@ categories:
           - v1.0.1
           - v1.0.0
           - v0.0.0
+        registryId: cloud-native-toolkit/clis/util
         group: clis
         displayName: CLI installer
       - cloudProvider: ""
